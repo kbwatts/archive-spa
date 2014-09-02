@@ -224,7 +224,7 @@ em {
 }
 @media (max-width: 979px) {
 	.navbar-inner {
-	min-height: 5.75em;
+	min-height: 5.25em;
 }
 }
 .navbar-inverse .navbar-inner {
