@@ -222,6 +222,11 @@ em {
 .navbar-inner {
 	min-height: 4.75em;
 }
+@media (max-width: 979px) {
+	.navbar-inner {
+	min-height: 5.75em;
+}
+}
 .navbar-inverse .navbar-inner {
 	background-repeat: repeat;
 	background-color: #0b333f;
