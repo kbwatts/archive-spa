@@ -229,8 +229,8 @@ em {
 }
 .navbar-inverse .navbar-inner {
 	background-repeat: repeat;
-	background-color: #0b333f;
-	border-color: #f0bf00;
+	background-color: #000;
+	border-color: #FFE129;
 }
 .navbar-wrapper {
 	overflow:hidden;/* No fixed height, will break collapsible nav */
