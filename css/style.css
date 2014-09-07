@@ -108,7 +108,7 @@ a:hover, a:active {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal; /* reset default browser weight for our webfonts */
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 }
 h1 {
 	font-size: 1.5em; /* 24px */
@@ -165,7 +165,7 @@ em {
 .more-link {
 	font-size: .875em; /* 14px */
 	margin-top: 1.5em;
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 }
 .more-link:link, .more-link:visited {
 	color: #f0bf00;
@@ -214,7 +214,7 @@ em {
 	font-size: 1.75em;
 	margin-left: 0;
 	font-weight: normal;
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 }
 .navbar .brand a:hover {
 	text-decoration: none;
@@ -246,7 +246,7 @@ em {
 	margin-top: 1.125em;
 }
 ul#menu-main > li > a {
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 	font-weight: normal;
 	font-size: 1em;
 	color: #fff;
@@ -280,7 +280,7 @@ ul#menu-main > li > a:hover {
 }
 #headerwrap h1 {
 	color: #FFFFFF;
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 	font-size: 4em;
 	font-weight: 600;
 	margin: 0 0;
@@ -317,7 +317,7 @@ ul#menu-main > li > a:hover {
 	width:50%;
 }
 #headerwrap input[type=submit] {
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 	color: #fff;
 	width: 185px;
 	height: 2.9em;
@@ -355,7 +355,7 @@ section.single-page {
 }
 section.single-page h1 {
 	text-align: center;
-	font-family:  'Brandon Grotesque', cursive;
+	font-family:  'Brandon Grotesque', sans-serif;
 	margin-bottom: 2em; /* 72px */
 	font-size: 2.25em; /* 36px */
 }
@@ -381,7 +381,7 @@ section.single-page h1 {
 	max-width: 1170px;
 }
 #feature-headline {
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 	text-transform: uppercase;
 	color: rgba(228, 229, 229, 1);
 	margin-bottom: 3%; /* 39px */
@@ -390,11 +390,11 @@ section.single-page h1 {
 	background-size: 100% auto;
 }
 #feature-headline span {
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 	text-transform: lowercase;
 }
 #feature article p {
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 	font-size: 40px;
 	margin-bottom: 0;
 	line-height: 1.35;
@@ -416,7 +416,7 @@ section#portfolio hgroup h2 {
 }
 section#portfolio hgroup h3 {
 	margin-top:  .35em;
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 }
 section#portfolio .entry-content {
 	margin: 1em 0 2.5em;
@@ -512,7 +512,7 @@ blockquote.mega p {
 	font-size: 45px;
 	line-height: 50px;
 	text-align: left;
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 	font-weight:bold;
 	color:#312A1E;
 }
@@ -643,7 +643,7 @@ section#team .align, section#contact .align {
 	height: 3.25em;
 }
 #theme-form input[type=submit] {
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 	color: #fff;
 	width: 185px;
 	height: 60px;
@@ -800,7 +800,7 @@ footer p {
 08 Buttons ------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */    
 .btn {
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 	color: #fff;
 	width: 185px;
 	height: 20px;
@@ -832,7 +832,7 @@ footer p {
 }
 
 .btn-expand {
-	font-family: 'Brandon Grotesque', cursive;
+	font-family: 'Brandon Grotesque', sans-serif;
 	color: #333;
 	background-color: #fafafa;
 	border-color: #ccc;
