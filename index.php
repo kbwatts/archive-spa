@@ -240,18 +240,18 @@
               <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="cform-form">
                 <div class="row">
                   <div class="span6"> <span class="your-name">
-                    <input type="text" id="name" name="name" placeholder="Your Name" class="cform-text" size="40" title="your name" oninput="validate()" onclick="validate()" onkeychange="validate()" onkeydown="validate()">
+                    <input type="text" id="name" name="name" placeholder="Your Name (required)" class="cform-text" size="40" title="your name" oninput="validate()" onclick="validate()" onkeychange="validate()" onkeydown="validate()">
                     </span> </div>
                   <div class="span6"> <span class="your-email">
-                    <input type="text" id="email" name="email" placeholder="Your Email" class="cform-text" size="40" title="your email" oninput="validate()" onclick="validate()" onkeychange="validate()" onkeydown="validate()">
+                    <input type="text" id="email" name="email" placeholder="Your Email (required)" class="cform-text" size="40" title="your email" oninput="validate()" onclick="validate()" onkeychange="validate()" onkeydown="validate()">
                     </span> </div>
                 </div>
                 <div class="row">
                   <div class="span6"> <span class="company">
-                    <input type="text" id="number" name="number" placeholder="Your Phone Number" class="cform-text" size="40" title="your phone number" oninput="validate()" onclick="validate()" onkeychange="validate()" onkeydown="validate()">
+                    <input type="text" id="number" name="number" placeholder="Your Phone Number (required)" class="cform-text" size="40" title="your phone number" oninput="validate()" onclick="validate()" onkeychange="validate()" onkeydown="validate()">
                     </span> </div>
                   <div class="span6"> <span class="website">
-                    <input type="text" id="size" name="size" placeholder="Your Expected Group Size" class="cform-text" size="40" title="your expected group size" oninput="validate()" onclick="validate()" onkeychange="validate()" onkeydown="validate()">
+                    <input type="text" id="size" name="size" placeholder="Your Expected Group Size (required)" class="cform-text" size="40" title="your expected group size" oninput="validate()" onclick="validate()" onkeychange="validate()" onkeydown="validate()">
                     </span> </div>
                 </div>
                 <div class="row">
