@@ -131,7 +131,7 @@
       </div>
       <!-- /.container -->
     </section>
-    <!--******************** Testimonials Section ********************-->
+    <!--******************** Map Section ********************-->
     <div class="scrollblock">
       <section id="feature">
         <div class="container">
@@ -150,7 +150,7 @@
         <!-- ./container -->
       </section>
     </div>
-    <!--******************** News Section ********************-->
+    <!--******************** When Section ********************-->
     <section id="news" class="single-page scrollblock">
       <div class="container">
         <div class="align"><i class="fa fa-clock-o"></i></div>
@@ -162,7 +162,69 @@
         <!-- /.row -->
       <!-- /.container -->
     </section>
-    <!--******************** Contact Section ********************-->
+    <!--******************** RSVP Section ********************-->
+    <?php
+    // define variables and set to empty values
+    $nameErr = $emailErr = $genderErr = $websiteErr = "";
+    $name = $email = $gender = $comment = $website = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+       if (empty($_POST["name"])) {
+         $nameErr = "Name is required";
+       } else {
+         $name = test_input($_POST["name"]);
+         // check if name only contains letters and whitespace
+         if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+           $nameErr = "Only letters and white space allowed"; 
+         }
+       }
+       
+       if (empty($_POST["email"])) {
+         $emailErr = "Email is required";
+       } else {
+         $email = test_input($_POST["email"]);
+         // check if e-mail address is well-formed
+         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+           $emailErr = "Invalid email format"; 
+         }
+       }
+         
+       if (empty($_POST["number"])) {
+         $number = "";
+       } else {
+         $number = test_input($_POST["number"]);
+         // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+         if (!preg_match("/[0-9]*/",$number)) {
+           $websiteErr = "Did you enter the right number? Try without brackets or spaces."; 
+         }
+       }
+
+       if (empty($_POST["size"])) {
+         $size = "";
+       } else {
+         $size = test_input($_POST["size"]);
+         // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+         if (!preg_match("/[0-9]*/",$number)) {
+           $websiteErr = "Please enter a valid group size."; 
+         }
+       }
+
+        if (empty($_POST["comment"])) {
+         $comment = "";
+       } else {
+         $comment = test_input($_POST["comment"]);
+       }
+
+       mail("kbwatts@gmail.com","[MK2015] Message",$name . " just sent you a message! Email: " . $email . " - Phone number: " . $number . " - Group Size: " . $size . " - Comment: " . $comment);
+    }
+
+    function test_input($data) {
+       $data = trim($data);
+       $data = stripslashes($data);
+       $data = htmlspecialchars($data);
+       return $data;
+    }
+    ?>
     <section id="contact" class="single-page scrollblock">
       <div class="container">
         <div class="align"><i class="icon-mail-2"></i></div>
@@ -170,31 +232,31 @@
         <div class="row">
           <div class="span12">
             <div class="cform" id="theme-form">
-              <form action="#" method="post" class="cform-form">
+              <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="cform-form">
                 <div class="row">
                   <div class="span6"> <span class="your-name">
-                    <input type="text" name="your-name" placeholder="Your Name" class="cform-text" size="40" title="your name">
+                    <input type="text" name="name" placeholder="Your Name" class="cform-text" size="40" title="your name" value="<?php echo $name;?>">
                     </span> </div>
                   <div class="span6"> <span class="your-email">
-                    <input type="text" name="your-email" placeholder="Your Email" class="cform-text" size="40" title="your email">
+                    <input type="text" name="email" placeholder="Your Email" class="cform-text" size="40" title="your email" value="<?php echo $email;?>">
                     </span> </div>
                 </div>
                 <div class="row">
                   <div class="span6"> <span class="company">
-                    <input type="text" name="your-number" placeholder="Your Phone Number" class="cform-text" size="40" title="your phone number">
+                    <input type="text" name="number" placeholder="Your Phone Number" class="cform-text" size="40" title="your phone number" value="<?php echo $number;?>">
                     </span> </div>
                   <div class="span6"> <span class="website">
-                    <input type="text" name="your-group-size" placeholder="Your Expected Group Size" class="cform-text" size="40" title="your expected group size">
+                    <input type="text" name="size" placeholder="Your Expected Group Size" class="cform-text" size="40" title="your expected group size" value="<?php echo $size;?>">
                     </span> </div>
                 </div>
                 <div class="row">
                   <div class="span12"> <span class="message">
-                    <textarea name="message" class="cform-textarea" cols="40" rows="10" title="Please leave us your message" placeholder="Your message (optional)"></textarea>
+                    <textarea name="comment" class="cform-textarea" cols="40" rows="10" title="Please leave us your message" placeholder="Your message (optional)"><?php echo $comment;?></textarea>
                     </span> </div>
                 </div>
                 <div>
                   <!-- <input type="submit" value="Send message" class="cform-submit pull-left"> -->
-                  <input type="submit" value="Send message" class="cform-submit pull-left" action="mail.php" method="POST">
+                  <input type="submit" name="submit" value="Send message" class="cform-submit pull-left" method="POST">
                 </div>
                 <div class="cform-response-output"></div>
               </form>
@@ -224,8 +286,8 @@
     <!--ANALYTICS CODE-->
 	<script type="text/javascript">
 	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-29231762-1']);
-	  _gaq.push(['_setDomainName', 'dzyngiri.com']);
+	  _gaq.push(['_setAccount', 'UA-34194912-1']);
+	  _gaq.push(['_setDomainName', 'thequickbrownfoxinc.com']);
 	  _gaq.push(['_trackPageview']);
 	
 	  (function() {
