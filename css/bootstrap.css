@@ -1005,6 +1005,7 @@ input.span1, textarea.span1, .uneditable-input.span1 {
 input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
 	cursor: not-allowed;
 	background-color: #eeeeee;
+	background: white !important;
 }
 input[type=radio][disabled], input[type=checkbox][disabled], input[type=radio][readonly], input[type=checkbox][readonly] {
 	background-color: transparent;

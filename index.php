@@ -235,18 +235,18 @@
               <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="cform-form">
                 <div class="row">
                   <div class="span6"> <span class="your-name">
-                    <input type="text" name="name" placeholder="Your Name" class="cform-text" size="40" title="your name" value="<?php echo $name;?>">
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="cform-text" size="40" title="your name" value="<?php echo $name;?>" oninput="validate()" onclick="validate()" onkeychange="validate()" onkeydown="validate()">
                     </span> </div>
                   <div class="span6"> <span class="your-email">
-                    <input type="text" name="email" placeholder="Your Email" class="cform-text" size="40" title="your email" value="<?php echo $email;?>">
+                    <input type="text" id="email" name="email" placeholder="Your Email" class="cform-text" size="40" title="your email" value="<?php echo $email;?>" oninput="validate()" onclick="validate()" onkeychange="validate()" onkeydown="validate()">
                     </span> </div>
                 </div>
                 <div class="row">
                   <div class="span6"> <span class="company">
-                    <input type="text" name="number" placeholder="Your Phone Number" class="cform-text" size="40" title="your phone number" value="<?php echo $number;?>">
+                    <input type="text" id="number" name="number" placeholder="Your Phone Number" class="cform-text" size="40" title="your phone number" value="<?php echo $number;?>" oninput="validate()" onclick="validate()" onkeychange="validate()" onkeydown="validate()">
                     </span> </div>
                   <div class="span6"> <span class="website">
-                    <input type="text" name="size" placeholder="Your Expected Group Size" class="cform-text" size="40" title="your expected group size" value="<?php echo $size;?>">
+                    <input type="text" id="size" name="size" placeholder="Your Expected Group Size" class="cform-text" size="40" title="your expected group size" value="<?php echo $size;?>" oninput="validate()" onclick="validate()" onkeychange="validate()" onkeydown="validate()">
                     </span> </div>
                 </div>
                 <div class="row">
@@ -256,7 +256,7 @@
                 </div>
                 <div>
                   <!-- <input type="submit" value="Send message" class="cform-submit pull-left"> -->
-                  <input type="submit" name="submit" value="Send message" class="cform-submit pull-left" method="POST">
+                  <input type="submit" id="submitButton" name="submit" value="Send message" class="cform-submit pull-left" method="POST" disabled title="Please fill in the fields before sending your message.">
                 </div>
                 <div class="cform-response-output"></div>
               </form>
@@ -282,19 +282,21 @@
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="js/site.js"></script>
-    
-    <!--ANALYTICS CODE-->
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-34194912-1']);
-	  _gaq.push(['_setDomainName', 'thequickbrownfoxinc.com']);
-	  _gaq.push(['_trackPageview']);
-	
-	  (function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
+    <script type="text/javascript">
+    function validate() {
+        var re = /\S+@\S+\.\S+/;
+        var emailToTest = document.getElementById("email").value;
+        var emailIsValid = re.test(emailToTest);
+        var nameIsValid = (document.getElementById("name").value != "");
+        var sizeIsValid = (document.getElementById("size").value != "");
+        var numberIsValid = (document.getElementById("number").value != "");
+
+        if (emailIsValid && nameIsValid && numberIsValid && sizeIsValid) {
+            document.getElementById("submitButton").disabled = false;
+        } else if (!emailIsValid || !nameIsValid || !numberIsValid || sizeIsValid) {
+            document.getElementById("submitButton").disabled = true;
+        }
+    }
+    </script>
     </body>
     </html>

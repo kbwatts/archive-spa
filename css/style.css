@@ -623,10 +623,11 @@ section#team .align, section#contact .align {
 }
 #theme-form input[type=text]:focus, .cform-form textarea:focus {
 	background: rgba(101, 106, 100, 1);
+	/*background: #333;*/
 	color: #eff1ef;
-	box-shadow: none;
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
+	box-shadow: yellow;
+	-moz-box-shadow: yellow;
+	-webkit-box-shadow: yellow;
 	transition: background 0.25 ease-in;
 	-moz-transition: background 0.25 ease-in;
 	-webkit-transition: background 0.25 ease-in;
@@ -640,7 +641,7 @@ section#team .align, section#contact .align {
 	width: 185px;
 	height: 60px;
 	text-shadow: none;
-	font-size: 1.3125em; /* 21px */
+	font-size: 1.3125em;
 	padding:0.5em;
 	letter-spacing: 0.05em;
 	margin: 0 0 20px 0;
@@ -654,6 +655,14 @@ section#team .align, section#contact .align {
 	box-shadow: none;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
+}
+#theme-form input[type=submit][disabled] {
+	color: #fafafa !important;
+	background: #B59000 !important;
+}
+#theme-form input[type=submit][disabled]:hover {
+	color: #fafafa !important;
+	background: #B59000 !important;
 }
 #theme-form input[type=submit]:hover, #theme-form input[type=submit]:active {
 	background: #43413e !important;
