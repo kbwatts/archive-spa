@@ -215,7 +215,7 @@
          $comment = test_input($_POST["comment"]);
        }
 
-       mail("kbwatts@gmail.com","[MK2015] Message",$name . " just sent you a message! Email: " . $email . " - Phone number: " . $number . " - Group Size: " . $size . " - Comment: " . $comment);
+       mail("kbwatts@gmail.com, mithila.fox@gmail.com","[MK2015] Message",$name . " just sent you a message! Email: " . $email . " - Phone number: " . $number . " - Group Size: " . $size . " - Comment: " . $comment);
     }
 
     function test_input($data) {
